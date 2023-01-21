@@ -1,0 +1,284 @@
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    }
+    
+    *,
+    *::before,
+    *::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+h1, h2, h3, p {
+    margin: 0;
+    font-family: TrebuchetMS;
+}
+
+@font-face {
+    font-family: "Exo20-Thin";
+    src: local('Exo20-Thin'), 
+        url(../fonts/Exo20-Thin.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+font-family: "TrebuchetMS";
+src: local("TrebuchetMS"),
+    url(../fonts/TrebuchetMS.woff) format("woff");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+.body {
+    background-image: url(../img/pattern.png);
+    height: 100%;
+}
+
+.main {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section {
+    &__container {
+        max-width: 1280px;
+        min-width: 320px;
+        margin: 0 auto;
+        padding: 36px 80px 67px 80px;
+    }
+}
+
+.container__title {
+    font-family: Exo20-Thin;
+    text-align: center;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+    text-shadow: 0px 1px 1px #000000;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+}
+
+.food {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+    align-items: baseline;
+}
+
+.food-main {
+    text-align: center;
+    position: relative;
+    &__link{
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: none;
+    border-bottom: dashed;
+    color: #1698D9;
+    cursor: pointer;
+    }
+    &__text {
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+    &__text-after-select {
+        display: none;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+    &__text-disabled {
+        display: none;
+        font-size: 13px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+}
+
+.food-main-disabled {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: linear-gradient(180deg, rgba(181, 184, 187, 0.5) 50%, rgba(181, 184, 187, 0.5) 50%);
+    bottom: 32.3px;
+    left: 0;
+    right: 0;
+    border: 4px solid gray;
+    border-radius: 10px;
+}
+
+.food-main:nth-child(3) .cats-food{
+    border: 4px solid #B3B3B3;
+}
+
+.food-main:nth-child(3) .cats-food__corner {
+    border-right: 4px solid #B3B3B3;
+}
+
+.food-main:nth-child(3) .cats-food__block {
+    color: #B3B3B3;
+}
+
+.food-main:nth-child(3) .cats-food__block .block-food__text-title {
+    color: #B3B3B3;
+}
+.food-main:nth-child(3) .cats-food__block .block-food__text-count {
+    color: #B3B3B3;
+}
+.food-main:nth-child(3) .cats-food__block .block-food__text-present {
+    color: #B3B3B3;
+}
+.food-main:nth-child(3) .cats-food__block .block-food__text-satisfied {
+    color: #B3B3B3;
+}
+
+.food-main:nth-child(3) .cats-food__weight {
+    background-color:#B3B3B3;
+}
+.food-main:nth-child(3) .cats-food::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(181, 184, 187, 0.5) 50%, rgba(181, 184, 187, 0.5) 50%);
+}
+
+.food-main-disable .cats-food:hover {
+    cursor: not-allowed;
+}
+
+.cats-food {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 480px;
+    position: relative;
+    padding: 21px 16px 16px 51px;
+    background-image: url(../img/cat.png);
+    background-repeat: no-repeat;
+    left: 0;
+    bottom: 0;
+    text-align: start;
+    background-color: #FFFFFF;
+    border: 4px solid #1698D9;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    &__weight {
+        padding-top: 25px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 40px;
+        text-align: center;
+        font-weight: 400;
+        font-family: TrebuchetMS;
+        bottom: 16px;
+        right: 16px;
+        position: absolute;
+        color: #FFFFFF;
+        background-color: #1698D9;
+    }
+    &__weight-first {
+        font-size: 42px;
+        line-height: 22px;
+        margin-bottom: 7px;
+    }
+    &__weight-second {
+        font-size: 22px;
+        line-height: 21px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &__corner {
+        width: 125px;
+        top: -55.9px;
+        left: -83px;
+        display: block;
+        height: 71px;
+        transform: rotate(45deg);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-image: url(../img/pattern.png);
+        z-index: 1;
+        border-right: 4px solid #1698d9
+    }
+    &__corner::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.4);
+    }
+}
+
+.cats-food--active:hover, .cats-food--active {
+    border: 4px solid #1698D9;
+}
+.cats-food--active:hover .cats-food__corner--active {
+    border-right: 4px solid #1698D9;
+}
+
+.cats-food__corner--active {
+    border-right: 4px solid #D91667;
+}
+
+.cats-food--active {
+    border: 4px solid #D91667;
+}
+
+.cats-food__weight--active {
+    background-color: #D91667;
+}
+
+.block-food {
+    list-style-type: none;
+    &__text-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #666666;
+        margin-bottom: 5px;
+    }
+    &__title {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    &__subtitle {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+    &__text-count {
+        font-size: 14px;
+        line-height: 16px;
+        color: #666666;
+    }
+    &__text-present {
+        font-size: 14px;
+        line-height: 16px;
+        color: #666666;
+    }
+    &__text-satisfied {
+        font-size: 14px;
+        line-height: 16px;
+        color: #666666;
+    }
+}

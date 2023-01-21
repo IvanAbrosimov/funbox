@@ -1,0 +1,22 @@
+@media (max-width: 992px) {
+    .body {
+        height: auto;
+    }
+
+    .food-main:nth-child(3n) {
+        text-align: center;
+    }
+
+    .food {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cats-food--active:hover, .cats-food--active {
+        border: 4px solid #D91667;
+    }
+    .cats-food--active:hover .cats-food__corner--active {
+        border-right: 4px solid #D91667;
+    }
+}
